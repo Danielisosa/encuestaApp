@@ -1,5 +1,13 @@
 # EncuestaApp
 
+Proyecto de una app de encuesta
+
+## Pasos a seguir:
+
+-Instalar las dependencias con npm-install
+-Instalar npm -g json-server para poder cargar la data
+-Luego dentro del directorio "data" del proyecto ejecutar json-server db.json
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
 ## Development server
