@@ -1,0 +1,31 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="push">
+    <mat-toolbar color="primary">
+      <span id="menu">Menu</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <a [routerLink]="['/pages/encuesta']" mat-list-item routerLinkActive="active">
+        <mat-icon mat-list-icon>list alt</mat-icon>
+        <span>Encuestas</span>
+
+      </a>
+      <a [routerLink]="['/pages/estadisticas']" mat-list-item routerLinkActive="active">
+        <mat-icon mat-list-icon>equalizer</mat-icon>
+        <span>Estadisticas</span>
+      </a>
+    </mat-nav-list>
+
+  </mat-sidenav>
+  <mat-toolbar color="accent">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 id="logo">EncuestaApp</h1>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

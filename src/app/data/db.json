@@ -1,0 +1,112 @@
+{
+  "encuestas": [
+    {
+      "id": 0,
+      "correo": "danielisosa.0512@gmail.com",
+      "edad": "18-24",
+      "sexo": "Femenino",
+      "redSocial": "Instagram",
+      "tiempoFacebook": 4,
+      "tiempoWhatsapp": 5,
+      "tiempoTwitter": 0,
+      "tiempoInstagram": 6,
+      "tiempoTiktok": 0
+    },
+    {
+      "id": 1,
+      "correo": "jose2@gmail.com",
+      "edad": "25-33",
+      "sexo": "Masculino",
+      "redSocial": "Facebook",
+      "tiempoFacebook": 5,
+      "tiempoWhatsapp": 7,
+      "tiempoTwitter": 2,
+      "tiempoInstagram": 3,
+      "tiempoTiktok": 2
+    },
+    {
+      "id": 2,
+      "correo": "maria@gmail.com",
+      "edad": "18-24",
+      "sexo": "Femenino",
+      "redSocial": "Instagram",
+      "tiempoFacebook": 6,
+      "tiempoWhatsapp": 3,
+      "tiempoTwitter": 3,
+      "tiempoInstagram": 7,
+      "tiempoTiktok": 5
+    },
+    {
+      "id": 3,
+      "correo": "pedro@gmail.com",
+      "edad": "34-40",
+      "sexo": " Masculino",
+      "redSocial": "Facebook",
+      "tiempoFacebook": 6,
+      "tiempoWhatsapp": 3,
+      "tiempoTwitter": 0,
+      "tiempoInstagram": 3,
+      "tiempoTiktok": 1
+    },
+    {
+      "id": 4,
+      "correo": "gabriel@gmail.com",
+      "edad": "18-24",
+      "sexo": "Masculino",
+      "redSocial": "Instagram",
+      "tiempoFacebook": 2,
+      "tiempoWhatsapp": 5,
+      "tiempoTwitter": 0,
+      "tiempoInstagram": 7,
+      "tiempoTiktok": 0
+    },
+    {
+      "correo": "gabriel@gmail.com",
+      "edad": "26-33",
+      "sexo": "Masculino",
+      "redSocial": "Tiktok",
+      "tiempoFacebook": 3,
+      "tiempoWhatsapp": 2,
+      "tiempoTwitter": 1,
+      "tiempoInstagram": 4,
+      "tiempoTiktok": 5,
+      "id": 6
+    },
+    {
+      "correo": "daniel@gmail.com",
+      "edad": "26-33",
+      "sexo": "Masculino",
+      "redSocial": "WhatsApp",
+      "tiempoFacebook": 5,
+      "tiempoWhatsapp": 8,
+      "tiempoTwitter": 0,
+      "tiempoInstagram": 5,
+      "tiempoTiktok": 0,
+      "id": 7
+    },
+    {
+      "correo": "ernesto@gmail.com",
+      "edad": "34-40",
+      "sexo": "Masculino",
+      "redSocial": "Tiktok",
+      "tiempoFacebook": 4,
+      "tiempoWhatsapp": 3,
+      "tiempoTwitter": 0,
+      "tiempoInstagram": 2,
+      "tiempoTiktok": 6,
+      "id": 8
+    },
+    {
+      "correo": "3",
+      "edad": "26-33",
+      "sexo": "Femenino",
+      "redSocial": "Twitter",
+      "tiempoFacebook": 0,
+      "tiempoWhatsapp": 0,
+      "tiempoTwitter": 0,
+      "tiempoInstagram": 0,
+      "tiempoTiktok": 0,
+      "id": 9
+    }
+  ]
+}

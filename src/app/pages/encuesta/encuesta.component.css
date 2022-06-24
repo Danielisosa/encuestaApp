@@ -1,0 +1,70 @@
+#container {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+mat-form-field.mat-form-field {
+  width: 80%;
+}
+
+.container-preguntas {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 500px;
+  height: auto;
+  background-color: rgb(255, 248, 248);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0px 3px 5px rgb(250, 115, 178);
+}
+.subtitulos {
+  font-size: 1.4em;
+  font-weight: 400;
+  display: inline-block;
+  color: rgb(41, 41, 41);
+}
+.text-opciones {
+  width: 1.5em;
+}
+h2 {
+  display: inline;
+  font-size: 1.8em;
+  font-weight: 700;
+  border-bottom: 4px solid #3f51b5;
+}
+button {
+  font-size: 1.4em;
+  font-weight: 400;
+}
+.text-respuestas {
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+mat-card {
+  background-color: rgb(255, 248, 248);
+  width: 70%;
+  padding: 15px;
+  margin: 0;
+  box-shadow: 0px 3px 5px rgb(250, 115, 178) !important;
+  border-radius: 20px;
+}
+mat-card-title span {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  margin: 20px;
+  text-shadow: 2px 1px 1px rgb(255, 255, 255);
+}
+mat-card .text-respuestas {
+  margin: 10px 0px 15px 0px;
+  display: inline;
+  border-bottom: 4px solid #3f51b5;
+}
+

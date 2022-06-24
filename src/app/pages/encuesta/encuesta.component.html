@@ -1,0 +1,241 @@
+<div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+  <div *ngIf=" !iniciarEncuesta" class="d-flex flex-column align-items-center mt-3">
+    <h2>Deseas realizar la encuesta?</h2>
+    <button mat-raised-button color="accent" (click)="cambiarEstado('iniciar')">
+      <mat-icon mat-list-icon>done all</mat-icon>
+      Si quiero
+    </button>
+    <hr>
+  </div>
+
+  <div *ngIf="iniciarEncuesta==true" id="container"
+    class=" d-flex flex-column justify-content-center align-items-center">
+
+    <div *ngIf="!estadoRespuesta; else respuestas">
+      <h2 class="m-4">Preguntas de la encuesta: </h2>
+    </div>
+
+    <ng-template #respuestas>
+      <h2 class="m-4">Respuestas de la encuesta: </h2>
+    </ng-template>
+
+    <div *ngIf="estadoCorreo==true" class=" d-flex  m-3 container-preguntas">
+      <div class="container-fluid d-flex">
+        <mat-form-field class="example-full-width">
+          <mat-label class="subtitulos">
+            <b> Correo:</b>
+          </mat-label>
+          <input matInput type="email" name="correo" [(ngModel)]="encuesta.correo" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width ms-5">
+          <mat-label class="subtitulos">
+            <b>Edad: </b>
+          </mat-label>
+          <mat-select [(ngModel)]="encuesta.edad" name="edad" required>
+            <mat-option *ngFor="let edad of edades" [value]="edad" class="text-respuestas">
+              {{ edad }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="mt-3">
+        <button mat-raised-button color="accent" (click)="cambiarEstado('correo')">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div *ngIf="estadoSexo==true" class="container d-flex flex-column m-3 container-preguntas">
+      <div class=" container ">
+        <mat-label class=" subtitulos" required>
+          <b> Sexo:</b>
+        </mat-label>
+      </div>
+      <div class="container-fluid d-flex">
+        <mat-radio-group aria-label="Select an option" class="m-4" [(ngModel)]="encuesta.sexo" name="sexo" required>
+          <mat-radio-button value="Masculino" class=" subtitulos">Masculino</mat-radio-button>
+          <mat-radio-button value="Femenino" class="m-3 subtitulos">Femenino</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="mt-3">
+        <button mat-raised-button color="accent" (click)="cambiarEstado('sexo')">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div *ngIf="estadoRedFavorita==true" class="container d-flex flex-column m-3 container-preguntas">
+      <div class=" container ">
+        <mat-label class="subtitulos" required>
+          <b>Red social Favorita:</b>
+        </mat-label>
+      </div>
+      <div class="container-fluid d-flex flex-nowrap">
+        <mat-radio-group aria-label=" Select an option" class="example-radio-group m-4" [(ngModel)]="encuesta.redSocial"
+          name="redSocial" required>
+          <mat-radio-button class="example-radio-button m-3 subtitulos" *ngFor="let red of redesSociales" [value]="red"
+            required>
+            {{ red }}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="mt-3">
+        <button mat-raised-button color="accent" (click)="cambiarEstado('red')">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div *ngIf="estadoTF==true" class="container d-flex flex-column m-3 container-preguntas">
+      <div class="container-fluid d-flex">
+        <mat-form-field class=" example-full-width ms-5">
+          <mat-label class="subtitulos">
+            <b>Tiempo promedio al Dia en Facebook: </b>
+          </mat-label>
+          <mat-select required [(ngModel)]="encuesta.tiempoFacebook" name="horaF" required>
+            <mat-option *ngFor="let horaF of horas" [value]="horaF" class="text-respuestas">
+              {{ horaF }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="mt-3">
+        <button mat-raised-button color="accent" (click)="cambiarEstado('TF')">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div *ngIf="estadoTI==true" class="container d-flex m-3 container-preguntas">
+      <div class="container-fluid d-flex">
+        <mat-form-field class="example-full-width ms-5">
+          <mat-label class="subtitulos">
+            <b>Tiempo promedio al Dia en Instagram:</b>
+          </mat-label>
+          <mat-select [(ngModel)]="encuesta.tiempoInstagram" name="horaI" required>
+            <mat-option *ngFor="let horaI of horas" [value]="horaI" class="text-respuestas">
+              {{ horaI }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="mt-3">
+        <button mat-raised-button color="accent" (click)="cambiarEstado('TI')">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div *ngIf="estadoTW==true" class="container d-flex m-3 container-preguntas">
+      <div class="container-fluid d-flex">
+        <mat-form-field class=" example-full-width ms-5">
+          <mat-label class="subtitulos">
+            <b>Tiempo promedio al Dia en WhatsApp:</b>
+          </mat-label>
+          <mat-select [(ngModel)]="encuesta.tiempoWhatsapp" name="horaW" required>
+            <mat-option *ngFor="let horaW of horas" [value]="horaW" class="text-respuestas">
+              {{ horaW }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="mt-3">
+        <button mat-raised-button color="accent" (click)="cambiarEstado('TW')">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div *ngIf="estadoTT==true" class="container d-flex m-3 container-preguntas">
+      <div class="container-fluid d-flex">
+        <mat-form-field class="example-full-width ms-5">
+          <mat-label class="subtitulos">
+            <b>Tiempo promedio al Dia en Twitter: </b>
+          </mat-label>
+          <mat-select [(ngModel)]="encuesta.tiempoTwitter" name="horaT" required>
+            <mat-option *ngFor="let horaT of horas" [value]="horaT" class="text-respuestas">
+              {{ horaT }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="mt-3">
+        <button mat-raised-button color="accent" (click)="cambiarEstado('TT')">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
+    </div>
+
+
+    <div *ngIf="estadoTTk==true" class="container d-flex m-3 container-preguntas">
+      <div class="container-fluid d-flex">
+        <mat-form-field class=" example-full-width ms-5">
+          <mat-label class="subtitulos">
+            <b> Tiempo promedio al Dia en Tiktok:</b>
+          </mat-label>
+          <mat-select [(ngModel)]="encuesta.tiempoTiktok" name="horaTk" required>
+            <mat-option *ngFor="let horaTk of horas" [value]="horaTk" class="text-respuestas">
+              {{ horaTk}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="mt-3">
+        <button mat-raised-button color="accent" (click)="cambiarEstado('TTk')">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
+    </div>
+
+
+    <mat-card *ngIf="estadoRespuesta==true" class="example-card ">
+
+      <mat-card-content class="d-flex flex-column justify-content-center">
+        <span class="fw-bold subtitulos">Correo:</span>
+        <p class="text-respuestas">
+          {{ encuesta.correo }}
+        </p>
+        <span class="fw-bold subtitulos">Edad:</span>
+        <p class="text-respuestas">
+          {{ encuesta.edad }}
+        </p>
+        <span class="fw-bold subtitulos">Sexo:</span>
+        <p class="text-respuestas">
+          {{ encuesta.sexo }}
+        </p>
+        <span class="fw-bold subtitulos">Red Social Favorita:</span>
+        <p class="text-respuestas">
+          {{ encuesta.sexo }}
+        </p>
+        <span class="fw-bold subtitulos">Tiempo promedio al dia en Facebook:</span>
+        <p class="text-respuestas">
+          {{ encuesta.tiempoFacebook }}
+        </p>
+        <span class="fw-bold subtitulos">Tiempo promedio al dia en Instagram:</span>
+        <p class="text-respuestas">
+          {{ encuesta.tiempoInstagram}}
+        </p>
+        <span class="fw-bold subtitulos">Tiempo promedio al dia en WhatsApp:</span>
+        <p class="text-respuestas">
+          {{ encuesta.tiempoWhatsapp }}
+        </p>
+        <span class="fw-bold subtitulos">Tiempo promedio al dia en Twitter:</span>
+        <p class="text-respuestas">
+          {{ encuesta.tiempoTwitter }}
+        </p>
+        <span class="fw-bold subtitulos">Tiempo promedio al dia en Tiktok:</span>
+        <p class="text-respuestas">
+          {{ encuesta.tiempoTiktok }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions class="d-flex align-item-center justify-content-center">
+        <button mat-raised-button color="accent" (click)="guardarEncuesta()">
+          <mat-icon>save</mat-icon>
+          Culminar Encuesta
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+</div>
