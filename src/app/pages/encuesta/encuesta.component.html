@@ -191,43 +191,64 @@
 
     <mat-card *ngIf="estadoRespuesta==true" class="example-card ">
 
-      <mat-card-content class="d-flex flex-column justify-content-center">
-        <span class="fw-bold subtitulos">Correo:</span>
-        <p class="text-respuestas">
-          {{ encuesta.correo }}
-        </p>
-        <span class="fw-bold subtitulos">Edad:</span>
-        <p class="text-respuestas">
-          {{ encuesta.edad }}
-        </p>
-        <span class="fw-bold subtitulos">Sexo:</span>
-        <p class="text-respuestas">
-          {{ encuesta.sexo }}
-        </p>
-        <span class="fw-bold subtitulos">Red Social Favorita:</span>
-        <p class="text-respuestas">
-          {{ encuesta.sexo }}
-        </p>
-        <span class="fw-bold subtitulos">Tiempo promedio al dia en Facebook:</span>
-        <p class="text-respuestas">
-          {{ encuesta.tiempoFacebook }}
-        </p>
-        <span class="fw-bold subtitulos">Tiempo promedio al dia en Instagram:</span>
-        <p class="text-respuestas">
-          {{ encuesta.tiempoInstagram}}
-        </p>
-        <span class="fw-bold subtitulos">Tiempo promedio al dia en WhatsApp:</span>
-        <p class="text-respuestas">
-          {{ encuesta.tiempoWhatsapp }}
-        </p>
-        <span class="fw-bold subtitulos">Tiempo promedio al dia en Twitter:</span>
-        <p class="text-respuestas">
-          {{ encuesta.tiempoTwitter }}
-        </p>
-        <span class="fw-bold subtitulos">Tiempo promedio al dia en Tiktok:</span>
-        <p class="text-respuestas">
-          {{ encuesta.tiempoTiktok }}
-        </p>
+      <mat-card-content class="justify-content-center">
+        <div id="respuestas-g">
+          <span class="fw-bold subtitulos">Correo:
+            <p class="text-respuestas">
+              {{ encuesta.correo }}
+            </p>
+          </span>
+
+          <span class="fw-bold subtitulos">Edad:
+            <p class="text-respuestas">
+              {{ encuesta.edad }}
+            </p>
+          </span>
+
+          <span class="fw-bold subtitulos">Sexo:
+            <p class="text-respuestas">
+              {{ encuesta.sexo }}
+            </p>
+          </span>
+
+          <span class="fw-bold subtitulos">Red Social Favorita:
+            <p class="text-respuestas">
+              {{ encuesta.redSocial }}
+            </p>
+          </span>
+
+          <span class="fw-bold subtitulos">Tiempo promedio al dia en Facebook:
+            <p class="text-respuestas">
+              {{ encuesta.tiempoFacebook }}
+            </p>
+          </span>
+
+          <span class="fw-bold subtitulos">Tiempo promedio al dia en Instagram:
+            <p class="text-respuestas">
+              {{ encuesta.tiempoInstagram}}
+            </p>
+          </span>
+
+          <span class="fw-bold subtitulos">Tiempo promedio al dia en WhatsApp:
+            <p class="text-respuestas">
+              {{ encuesta.tiempoWhatsapp }}
+            </p>
+          </span>
+
+          <span class="fw-bold subtitulos">Tiempo promedio al dia en Twitter:
+            <p class="text-respuestas">
+              {{ encuesta.tiempoTwitter }}
+            </p>
+          </span>
+
+
+          <span class="fw-bold subtitulos">Tiempo promedio al dia en Tiktok:
+            <p class="text-respuestas">
+              {{ encuesta.tiempoTiktok }}
+            </p>
+          </span>
+
+        </div>
       </mat-card-content>
       <mat-card-actions class="d-flex align-item-center justify-content-center">
         <button mat-raised-button color="accent" (click)="guardarEncuesta()">
